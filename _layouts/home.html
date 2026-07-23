@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<h1 class="page-title">{{ page.title | default: site.title }}</h1>
+<p class="page-lede">{{ site.description }}</p>
+
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li class="post-item">
+    <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <div class="post-meta">
+      {{ post.date | date: '%Y-%m-%d' }}{% if post.tags.size > 0 %} · {{ post.tags | join: ' · ' }}{% endif %}
+    </div>
+    {% if post.excerpt %}<p class="post-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 140 }}</p>{% endif %}
+  </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<article class="post">
+  {% if page.tags.size > 0 %}<div class="post-eyebrow">{{ page.tags | join: ' · ' }}</div>{% endif %}
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-meta">{{ page.date | date: '%Y-%m-%d' }} · {{ site.author }}</div>
+  <div class="post-body">
+    {{ content }}
+  </div>
+</article>

@@ -3,15 +3,11 @@ description: 코드로 검증하며 배우는 백엔드 학습 기록
 author: Gyeonglok Kim
 lang: ko
 
-theme: minima
+# 자체 레이아웃 사용 (테마 미사용). Hyde/Custom 두 스킨을 CSS 토글로 전환.
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# 최신 글 먼저
-paginate: 5
-
-# 빌드 제외
 exclude:
   - Gemfile
   - Gemfile.lock

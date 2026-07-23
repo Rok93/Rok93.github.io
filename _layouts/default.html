@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="{{ site.lang | default: 'ko' }}" data-skin="hyde">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% feed_meta %}
+  <script>
+    /* FOUC 방지: CSS 적용 전에 저장된 스킨을 미리 설정 */
+    (function(){try{var s=localStorage.getItem('rok93-skin');if(s){document.documentElement.dataset.skin=s;}}catch(e){}})();
+  </script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+      <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <p class="site-tagline">{{ site.description }}</p>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+      </nav>
+      <div class="sidebar-foot">© {{ site.time | date: '%Y' }} {{ site.author }}</div>
+    </div>
+  </aside>
+
+  <main class="content">
+    <button class="skin-toggle" type="button" aria-label="테마 전환">테마 · <span class="skin-name">Hyde</span></button>
+    <div class="content-inner">
+      {{ content }}
+    </div>
+  </main>
+
+  <script>
+    (function(){
+      var btn=document.querySelector('.skin-toggle');
+      var name=btn&&btn.querySelector('.skin-name');
+      var order=['hyde','custom'], label={hyde:'Hyde',custom:'Custom'};
+      function render(){var s=document.documentElement.dataset.skin||'hyde';if(name)name.textContent=label[s]||s;}
+      render();
+      if(btn){btn.addEventListener('click',function(){
+        var cur=document.documentElement.dataset.skin||'hyde';
+        var next=order[(order.indexOf(cur)+1)%order.length];
+        document.documentElement.dataset.skin=next;
+        try{localStorage.setItem('rok93-skin',next);}catch(e){}
+        render();
+      });}
+    })();
+  </script>
+</body>
+</html>
