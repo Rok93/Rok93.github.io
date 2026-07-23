@@ -41,6 +41,9 @@ img { max-width: 100%; height: auto; }
 a { color: var(--link); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+/* 한글이 단어 중간에서 끊기지 않도록 어절 단위로만 줄바꿈 */
+.site-title, .site-tagline { word-break: keep-all; }
+
 /* content typography */
 .content-inner { }
 .post-body h2, .post-body h3 { line-height: 1.25; letter-spacing: -.01em; margin: 1.8em 0 .5em; }
