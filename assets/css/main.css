@@ -193,6 +193,26 @@ a:hover { text-decoration: underline; }
 [data-skin="custom"] .post-eyebrow { font-family: var(--mono); }
 [data-skin="custom"] .post-body pre { background: #14181d; }
 
+/* --- Custom 스킨 에디토리얼 다듬기 --- */
+[data-skin="custom"] .sidebar { border-bottom: none; position: relative; }
+[data-skin="custom"] .sidebar::before {
+  content: ""; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--link);
+}
+[data-skin="custom"] .sidebar-inner { border-bottom: 1px solid var(--border); }
+[data-skin="custom"] .post-title { font-size: clamp(2rem, 4.4vw, 2.7rem); line-height: 1.12; }
+[data-skin="custom"] .post-eyebrow { letter-spacing: .16em; }
+[data-skin="custom"] .post .post-meta { font-family: var(--mono); font-size: .82rem; }
+[data-skin="custom"] .post-body h2 { font-family: var(--serif); font-size: 1.6rem; }
+[data-skin="custom"] .post-body h2::before {
+  content: ""; display: block; width: 40px; height: 2px; background: var(--link);
+  opacity: .85; margin-bottom: .6em;
+}
+[data-skin="custom"] .post-body blockquote {
+  border-left-width: 3px; font-family: var(--serif); font-style: italic; font-size: 1.12em;
+}
+[data-skin="custom"] .post-body a { text-underline-offset: 2px; }
+[data-skin="custom"] .post-list .post-link { font-size: 1.45rem; }
+
 /* ---------- 코드 문법 하이라이팅 (Rouge, 다크 코드배경용) ---------- */
 .post-body .highlight { background: transparent; }
 .post-body .highlight .c,  .post-body .highlight .cm, .post-body .highlight .c1,
