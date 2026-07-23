@@ -5,10 +5,10 @@
    ========================================================= */
 
 :root {
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
-          Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
-  --serif: Georgia, "Times New Roman", "Nanum Myeongjo", serif;
+  --sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  --serif: "Gowun Batang", Georgia, "Nanum Myeongjo", serif;
 
   /* 기본값(=Hyde). 스킨별로 아래에서 재정의 */
   --bg: #ffffff;
