@@ -3,6 +3,9 @@ description: 코드로 검증하며 배우는 백엔드 학습 기록
 author: Gyeonglok Kim
 lang: ko
 
+# 빌드 서버(UTC) 기준 미래 날짜 글도 게시 (KST 시각이 UTC로는 미래가 되는 함정 방지)
+future: true
+
 # 자체 레이아웃 사용 (테마 미사용). Hyde/Custom 두 스킨을 CSS 토글로 전환.
 plugins:
   - jekyll-feed
