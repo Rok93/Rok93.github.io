@@ -1,0 +1,19 @@
+title: Rok93 dev blog
+description: 코드로 검증하며 배우는 백엔드 학습 기록
+author: Gyeonglok Kim
+lang: ko
+
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# 최신 글 먼저
+paginate: 5
+
+# 빌드 제외
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
