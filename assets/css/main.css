@@ -175,6 +175,29 @@ a:hover { text-decoration: underline; }
 [data-skin="custom"] .post-eyebrow { font-family: var(--mono); }
 [data-skin="custom"] .post-body pre { background: #14181d; }
 
+/* ---------- 코드 문법 하이라이팅 (Rouge, 다크 코드배경용) ---------- */
+.post-body .highlight { background: transparent; }
+.post-body .highlight .c,  .post-body .highlight .cm, .post-body .highlight .c1,
+.post-body .highlight .cs, .post-body .highlight .cd { color: #8b96a5; font-style: italic; } /* 주석 */
+.post-body .highlight .k,  .post-body .highlight .kd, .post-body .highlight .kn,
+.post-body .highlight .kp, .post-body .highlight .kr, .post-body .highlight .kc { color: #c586c0; } /* 키워드 */
+.post-body .highlight .kt { color: #4ec9b0; }                                    /* 타입 */
+.post-body .highlight .s,  .post-body .highlight .s1, .post-body .highlight .s2,
+.post-body .highlight .se, .post-body .highlight .sb, .post-body .highlight .sd,
+.post-body .highlight .sc, .post-body .highlight .sx { color: #ce9178; }          /* 문자열 */
+.post-body .highlight .mi, .post-body .highlight .mf, .post-body .highlight .il,
+.post-body .highlight .m,  .post-body .highlight .mh, .post-body .highlight .mo,
+.post-body .highlight .mb { color: #b5cea8; }                                     /* 숫자 */
+.post-body .highlight .nf, .post-body .highlight .fm { color: #dcdcaa; }          /* 함수 */
+.post-body .highlight .nc, .post-body .highlight .nn,
+.post-body .highlight .no, .post-body .highlight .nb,
+.post-body .highlight .bp { color: #4ec9b0; }                                     /* 클래스/네임스페이스/빌트인 */
+.post-body .highlight .na { color: #9cdcfe; }                                     /* 속성/애노테이션 인자 */
+.post-body .highlight .nt { color: #569cd6; }                                     /* 태그 */
+.post-body .highlight .o,  .post-body .highlight .ow,
+.post-body .highlight .p { color: #d4d4d4; }                                      /* 연산자/구두점 */
+.post-body .highlight .err { color: #f48771; }
+
 /* 접근성 */
 :focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
