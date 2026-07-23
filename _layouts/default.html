@@ -7,8 +7,11 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {% feed_meta %}
   <script>
-    /* FOUC 방지: CSS 적용 전에 저장된 스킨을 미리 설정 */
-    (function(){try{var s=localStorage.getItem('rok93-skin');if(s){document.documentElement.dataset.skin=s;}}catch(e){}})();
+    /* FOUC 방지: CSS 적용 전에 저장된 스킨/밝기를 미리 설정 */
+    (function(){try{
+      var s=localStorage.getItem('rok93-skin'); if(s){document.documentElement.dataset.skin=s;}
+      var t=localStorage.getItem('rok93-theme'); if(t){document.documentElement.dataset.theme=t;}
+    }catch(e){}})();
   </script>
 </head>
 <body>
@@ -25,7 +28,10 @@
   </aside>
 
   <main class="content">
-    <button class="skin-toggle" type="button" aria-label="테마 전환">테마 · <span class="skin-name">Hyde</span></button>
+    <div class="toggles">
+      <button class="theme-toggle" type="button" aria-label="밝기 전환"><span class="theme-name">☀️</span></button>
+      <button class="skin-toggle" type="button" aria-label="테마 전환">테마 · <span class="skin-name">Hyde</span></button>
+    </div>
     <div class="content-inner">
       {{ content }}
     </div>
@@ -33,17 +39,28 @@
 
   <script>
     (function(){
-      var btn=document.querySelector('.skin-toggle');
-      var name=btn&&btn.querySelector('.skin-name');
-      var order=['hyde','custom'], label={hyde:'Hyde',custom:'Custom'};
-      function render(){var s=document.documentElement.dataset.skin||'hyde';if(name)name.textContent=label[s]||s;}
-      render();
-      if(btn){btn.addEventListener('click',function(){
-        var cur=document.documentElement.dataset.skin||'hyde';
-        var next=order[(order.indexOf(cur)+1)%order.length];
-        document.documentElement.dataset.skin=next;
-        try{localStorage.setItem('rok93-skin',next);}catch(e){}
-        render();
+      var root=document.documentElement;
+      /* 스킨 토글 (Hyde ↔ Custom) */
+      var sBtn=document.querySelector('.skin-toggle'), sName=sBtn&&sBtn.querySelector('.skin-name');
+      var sOrder=['hyde','custom'], sLabel={hyde:'Hyde',custom:'Custom'};
+      function sRender(){var s=root.dataset.skin||'hyde';if(sName)sName.textContent=sLabel[s]||s;}
+      sRender();
+      if(sBtn){sBtn.addEventListener('click',function(){
+        var cur=root.dataset.skin||'hyde', next=sOrder[(sOrder.indexOf(cur)+1)%sOrder.length];
+        root.dataset.skin=next; try{localStorage.setItem('rok93-skin',next);}catch(e){}
+        sRender();
+      });}
+      /* 밝기 토글 (Light ↔ Dark), 기본은 OS 설정 */
+      var tBtn=document.querySelector('.theme-toggle'), tName=tBtn&&tBtn.querySelector('.theme-name');
+      function effTheme(){
+        return root.dataset.theme || ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light');
+      }
+      function tRender(){if(tName)tName.textContent=effTheme()==='dark'?'🌙':'☀️';}
+      tRender();
+      if(tBtn){tBtn.addEventListener('click',function(){
+        var next=effTheme()==='dark'?'light':'dark';
+        root.dataset.theme=next; try{localStorage.setItem('rok93-theme',next);}catch(e){}
+        tRender();
       });}
     })();
   </script>

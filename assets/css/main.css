@@ -91,17 +91,18 @@ a:hover { text-decoration: underline; }
 .post-body > pre,
 .post-body > table { max-width: var(--measure-wide); }
 
-/* skin toggle button */
-.skin-toggle {
-  position: fixed; top: 16px; right: 16px; z-index: 20;
+/* toggles (밝기 + 스킨) */
+.toggles { position: fixed; top: 16px; right: 16px; z-index: 20; display: flex; gap: 8px; }
+.toggles button {
   font: 600 12.5px/1 var(--sans); letter-spacing: .02em;
-  padding: 8px 14px; border-radius: 999px; cursor: pointer;
-  border: 1px solid var(--border); background: rgba(255,255,255,.9);
+  padding: 8px 13px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--border); background: rgba(128,128,128,.16);
   color: var(--text); backdrop-filter: saturate(1.2) blur(6px);
   box-shadow: 0 2px 10px rgba(0,0,0,.08);
 }
-.skin-toggle:hover { border-color: var(--link); color: var(--link); }
-.skin-toggle .skin-name { color: var(--link); }
+.toggles button:hover { border-color: var(--link); color: var(--link); }
+.toggles .skin-name { color: var(--link); }
+.theme-toggle { line-height: 1; }
 
 /* =========================================================
    SKIN: Hyde (default) — 컬리 퍼플 사이드바 2단
@@ -169,6 +170,23 @@ a:hover { text-decoration: underline; }
 [data-skin="custom"] .post-body > .highlighter-rouge,
 [data-skin="custom"] .post-body > pre,
 [data-skin="custom"] .post-body > table { margin-inline: auto; }
+
+/* ---------- 라이트/다크 (스킨과 독립 축) ----------
+   기본: OS 설정 따름. 사용자가 버튼으로 명시 선택 시 data-theme로 덮어씀. */
+@media (prefers-color-scheme: dark) {
+  :root[data-skin="hyde"]:not([data-theme="light"]) {
+    --bg:#17151b; --text:#e7e3ec; --muted:#a49dae; --link:#cca3e6; --border:#2c2830; --code-bg:#241d29;
+  }
+  :root[data-skin="custom"]:not([data-theme="light"]) {
+    --bg:#0f1216; --text:#e7eaee; --muted:#98a0ab; --link:#5bbdb2; --border:#242a31; --code-bg:#191d24;
+  }
+}
+:root[data-theme="dark"][data-skin="hyde"] {
+  --bg:#17151b; --text:#e7e3ec; --muted:#a49dae; --link:#cca3e6; --border:#2c2830; --code-bg:#241d29;
+}
+:root[data-theme="dark"][data-skin="custom"] {
+  --bg:#0f1216; --text:#e7eaee; --muted:#98a0ab; --link:#5bbdb2; --border:#242a31; --code-bg:#191d24;
+}
 [data-skin="custom"] .post-title,
 [data-skin="custom"] .page-title { font-family: var(--serif); font-weight: 700; }
 [data-skin="custom"] .post-link { font-family: var(--serif); }
