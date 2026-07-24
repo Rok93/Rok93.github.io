@@ -2,6 +2,7 @@ title: "버그도 로키비키잖아?"
 description: 코드로 검증하며 배우는 백엔드 학습 기록
 author: Gyeonglok Kim
 lang: ko
+url: "https://rok93.github.io"
 
 # 빌드 서버(UTC) 기준 미래 날짜 글도 게시 (KST 시각이 UTC로는 미래가 되는 함정 방지)
 future: true
@@ -11,6 +12,13 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
+
+# 소셜 공유 카드 기본 이미지 (jekyll-seo-tag가 og:image로 사용)
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/og-image.png
 
 exclude:
   - Gemfile
