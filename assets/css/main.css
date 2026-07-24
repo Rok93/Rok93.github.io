@@ -213,6 +213,12 @@ a:hover { text-decoration: underline; }
 [data-skin="custom"] .post-body a { text-underline-offset: 2px; }
 [data-skin="custom"] .post-list .post-link { font-size: 1.45rem; }
 
+/* ---------- 댓글(utterances) ---------- */
+.comments { max-width: var(--measure); margin-top: 3.5em; padding-top: 1.5em; border-top: 1px solid var(--border); }
+.comments-title { font-size: 1.2rem; margin: 0 0 .3em; }
+[data-skin="custom"] .comments { margin-inline: auto; }
+[data-skin="custom"] .comments-title { font-family: var(--serif); }
+
 /* ---------- 코드 문법 하이라이팅 (Rouge, 다크 코드배경용) ---------- */
 .post-body .highlight { background: transparent; }
 .post-body .highlight .c,  .post-body .highlight .cm, .post-body .highlight .c1,

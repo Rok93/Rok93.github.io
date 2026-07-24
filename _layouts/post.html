@@ -9,3 +9,22 @@ layout: default
     {{ content }}
   </div>
 </article>
+
+<section class="comments" aria-label="댓글">
+  <h2 class="comments-title">댓글</h2>
+  <div id="comments"></div>
+</section>
+<script>
+  (function(){
+    var root=document.documentElement;
+    var dark=(root.dataset.theme || ((window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light'))==='dark';
+    var s=document.createElement('script');
+    s.src='https://utteranc.es/client.js';
+    s.setAttribute('repo','Rok93/Rok93.github.io');
+    s.setAttribute('issue-term','pathname');
+    s.setAttribute('label','comment');
+    s.setAttribute('theme',dark?'github-dark':'github-light');
+    s.crossOrigin='anonymous'; s.async=true;
+    document.getElementById('comments').appendChild(s);
+  })();
+</script>
