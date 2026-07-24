@@ -242,6 +242,18 @@ a:hover { text-decoration: underline; }
 .post-body .highlight .p { color: #d4d4d4; }                                      /* 연산자/구두점 */
 .post-body .highlight .err { color: #f48771; }
 
+/* ---------- 코드 복사 버튼 ---------- */
+.post-body pre { position: relative; }
+.copy-btn {
+  position: absolute; top: 8px; right: 8px;
+  font: 600 11px/1 var(--sans); letter-spacing: .02em;
+  padding: 5px 9px; border-radius: 6px; cursor: pointer;
+  border: 1px solid rgba(255,255,255,.18); background: rgba(255,255,255,.10); color: #d6d9de;
+  opacity: .5; transition: opacity .15s, background .15s;
+}
+.post-body pre:hover .copy-btn, .copy-btn:focus-visible { opacity: 1; }
+.copy-btn:hover { background: rgba(255,255,255,.22); }
+
 /* 접근성 */
 :focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }

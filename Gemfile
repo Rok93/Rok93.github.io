@@ -4,6 +4,7 @@ source "https://rubygems.org"
 gem "github-pages", group: :jekyll_plugins
 gem "jekyll-feed"
 gem "jekyll-seo-tag"
+gem "jekyll-sitemap"
 
 # Ruby 3.x 호환 보조 gem
 gem "webrick"
