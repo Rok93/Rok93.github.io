@@ -1,7 +1,7 @@
 ---
 layout: post
 title: '트랜잭션 격리수준과 MVCC — 읽기와 쓰기는 어떻게 서로를 안 막을까'
-date: 2026-07-27 09:00:00 +0900
+date: 2026-07-27 10:00:00 +0900
 tags: [database, transaction, isolation, mvcc, study]
 sanitized: true
 ---
