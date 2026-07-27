@@ -254,6 +254,18 @@ a:hover { text-decoration: underline; }
 .post-body pre:hover .copy-btn, .copy-btn:focus-visible { opacity: 1; }
 .copy-btn:hover { background: rgba(255,255,255,.22); }
 
+/* ---------- 시리즈 내비 ---------- */
+.series-nav { margin-top: 2.6em; padding: 16px 18px; border: 1px solid var(--border); border-radius: 12px; background: var(--code-bg); max-width: var(--measure); }
+[data-skin="custom"] .series-nav { margin-inline: auto; }
+.series-title { font-weight: 700; font-size: .95rem; margin-bottom: .55em; }
+.series-list { list-style: none; padding: 0; margin: 0 0 .8em; display: flex; flex-direction: column; gap: .3em; }
+.series-list li { font-size: .92rem; }
+.series-list li.current { font-weight: 700; }
+.series-list .here { font-size: .72rem; color: var(--muted); font-weight: 400; margin-left: .35em; }
+.series-pn { display: flex; justify-content: space-between; gap: 10px; border-top: 1px solid var(--border); padding-top: .7em; }
+.series-pn .pn { font-size: .9rem; font-weight: 600; }
+.series-badge { color: var(--link); }
+
 /* 접근성 */
 :focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }

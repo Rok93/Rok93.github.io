@@ -4,10 +4,35 @@ layout: default
 <article class="post">
   {% if page.tags.size > 0 %}<div class="post-eyebrow">{{ page.tags | join: ' · ' }}</div>{% endif %}
   <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-meta">{{ page.date | date: '%Y-%m-%d' }} · {{ site.author }}</div>
+  <div class="post-meta">
+    {{ page.date | date: '%Y-%m-%d' }} · {{ site.author }}{% if page.series %} · 시리즈 «{{ page.series }}» {{ page.series_part }}/{{ page.series_total }}편{% endif %}
+  </div>
   <div class="post-body">
     {{ content }}
   </div>
+
+  {% if page.series %}
+  {% assign parts = site.posts | where: "series", page.series | sort: "series_part" %}
+  <nav class="series-nav" aria-label="시리즈 목차">
+    <div class="series-title">📚 «{{ page.series }}» 시리즈 · 전체 {{ page.series_total }}편</div>
+    <ol class="series-list">
+      {% for p in parts %}
+        {% if p.series_part == page.series_part %}
+          <li class="current" aria-current="true">{{ p.series_part }}. {{ p.title | split: '— ' | last }} <span class="here">지금 읽는 중</span></li>
+        {% else %}
+          <li><a href="{{ p.url | relative_url }}">{{ p.series_part }}. {{ p.title | split: '— ' | last }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ol>
+    {% for p in parts %}{% if p.series_part == page.series_part %}{% assign cur = forloop.index0 %}{% endif %}{% endfor %}
+    {% assign previdx = cur | minus: 1 %}
+    {% assign nextidx = cur | plus: 1 %}
+    <div class="series-pn">
+      {% if cur > 0 %}{% assign prevp = parts[previdx] %}<a class="pn prev" href="{{ prevp.url | relative_url }}">← {{ prevp.series_part }}편</a>{% else %}<span></span>{% endif %}
+      {% if nextidx < parts.size %}{% assign nextp = parts[nextidx] %}<a class="pn next" href="{{ nextp.url | relative_url }}">{{ nextp.series_part }}편 →</a>{% endif %}
+    </div>
+  </nav>
+  {% endif %}
 </article>
 
 <section class="comments" aria-label="댓글">
