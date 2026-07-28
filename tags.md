@@ -2,6 +2,7 @@
 layout: default
 title: 태그
 description: 주제별로 모아 보기
+permalink: /tags/
 ---
 <style>
   .tag-cloud { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 32px; }

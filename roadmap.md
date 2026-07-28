@@ -2,6 +2,7 @@
 layout: default
 title: 학습 지도
 description: 무엇을 배웠고 무엇을 배울지 — 자동으로 자라는 학습 여정
+permalink: /roadmap/
 ---
 {% assign total = 0 %}{% assign done = 0 %}
 {% for c in site.data.roadmap.categories %}{% for it in c.items %}{% assign total = total | plus: 1 %}{% if it.done %}{% assign done = done | plus: 1 %}{% endif %}{% endfor %}{% endfor %}
