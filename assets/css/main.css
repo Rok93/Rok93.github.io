@@ -276,3 +276,19 @@ a:hover { text-decoration: underline; }
 .post-generated a { color:#5F0080; }
 :root[data-theme="dark"] .post-generated { background:#221d2b; border-color:#2f2838; color:#9990a6; }
 :root[data-theme="dark"] .post-generated a { color:#b98fd6; }
+
+/* 글 목차 (TOC) */
+.post-toc { background:#faf8fc; border:1px solid #ece8f2; border-radius:12px; padding:14px 18px; margin:20px 0; }
+.post-toc-title { font-size:12px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:#8a7fa0; margin-bottom:8px; }
+.post-toc-list { list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:5px; }
+.post-toc-list a { color:#5a5468; text-decoration:none; font-size:14px; border-bottom:1px solid transparent; }
+.post-toc-list a:hover { color:#5F0080; border-bottom-color:#5F0080; }
+:root[data-theme="dark"] .post-toc { background:#221d2b; border-color:#2f2838; }
+:root[data-theme="dark"] .post-toc-title { color:#a99fc0; }
+:root[data-theme="dark"] .post-toc-list a { color:#c9c2d6; }
+:root[data-theme="dark"] .post-toc-list a:hover { color:#b98fd6; border-bottom-color:#b98fd6; }
+
+/* 홈 목록의 태그 링크 */
+.post-meta .tag-link { color:#8a7fa0; text-decoration:none; }
+.post-meta .tag-link:hover { color:#5F0080; }
+:root[data-theme="dark"] .post-meta .tag-link:hover { color:#b98fd6; }

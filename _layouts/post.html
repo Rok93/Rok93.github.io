@@ -4,8 +4,9 @@ layout: default
 <article class="post">
   {% if page.tags.size > 0 %}<div class="post-eyebrow">{{ page.tags | join: ' · ' }}</div>{% endif %}
   <h1 class="post-title">{{ page.title }}</h1>
+  {% assign chars = content | strip_html | strip_newlines | size %}{% assign rmin = chars | divided_by: 500 | plus: 1 %}
   <div class="post-meta">
-    {{ page.date | date: '%Y-%m-%d' }} · {{ site.author }}{% if page.series %} · 시리즈 «{{ page.series }}» {{ page.series_part }}/{{ page.series_total }}편{% endif %}
+    {{ page.date | date: '%Y-%m-%d' }} · {{ site.author }} · 약 {{ rmin }}분{% if page.series %} · 시리즈 «{{ page.series }}» {{ page.series_part }}/{{ page.series_total }}편{% endif %}
   </div>
   {% if page.generated %}
   <div class="post-generated">
@@ -13,6 +14,7 @@ layout: default
     <span>이 글은 AI 학습 파이프라인이 자동으로 조사·집필·시각화했습니다. <a href="{{ '/about/' | relative_url }}">작동 방식</a></span>
   </div>
   {% endif %}
+  <nav class="post-toc" aria-label="목차" hidden></nav>
   <div class="post-body">
     {{ content }}
   </div>
@@ -57,5 +59,24 @@ layout: default
     s.setAttribute('theme',dark?'github-dark':'github-light');
     s.crossOrigin='anonymous'; s.async=true;
     document.getElementById('comments').appendChild(s);
+  })();
+</script>
+<script>
+  /* 목차(TOC) 자동 생성: 본문 h2가 3개 이상일 때만 */
+  (function(){
+    var body=document.querySelector('.post-body'), toc=document.querySelector('.post-toc');
+    if(!body||!toc)return;
+    var hs=body.querySelectorAll('h2');
+    if(hs.length<3)return;
+    var ul=document.createElement('ul'); ul.className='post-toc-list';
+    hs.forEach(function(h){
+      if(!h.id)return;
+      var li=document.createElement('li'), a=document.createElement('a');
+      a.href='#'+h.id; a.textContent=h.textContent;
+      li.appendChild(a); ul.appendChild(li);
+    });
+    if(!ul.children.length)return;
+    var title=document.createElement('div'); title.className='post-toc-title'; title.textContent='목차';
+    toc.appendChild(title); toc.appendChild(ul); toc.hidden=false;
   })();
 </script>
