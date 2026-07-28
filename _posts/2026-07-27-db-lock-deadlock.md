@@ -2,6 +2,7 @@
 layout: post
 title: 'DB 락과 데드락 — 서로가 서로를 기다리다 멈추는 순간'
 date: 2026-07-27 11:00:00 +0900
+image: /assets/img/db-lock-deadlock/hero.jpg
 tags: [database, study]
 sanitized: true
 ---

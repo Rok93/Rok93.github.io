@@ -2,6 +2,7 @@
 layout: post
 title: 'DB 인덱스와 B-Tree — 왜 인덱스 하나로 쿼리가 100배 빨라질까'
 date: 2026-07-27 09:00:00 +0900
+image: /assets/img/db-index-btree/hero.jpg
 tags: [database, index, b-tree, mysql, study]
 sanitized: true
 ---
