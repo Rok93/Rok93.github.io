@@ -7,6 +7,12 @@ layout: default
   <div class="post-meta">
     {{ page.date | date: '%Y-%m-%d' }} · {{ site.author }}{% if page.series %} · 시리즈 «{{ page.series }}» {{ page.series_part }}/{{ page.series_total }}편{% endif %}
   </div>
+  {% if page.generated %}
+  <div class="post-generated">
+    <span class="pg-emoji">🤖</span>
+    <span>이 글은 AI 학습 파이프라인이 자동으로 조사·집필·시각화했습니다. <a href="{{ '/about/' | relative_url }}">작동 방식</a></span>
+  </div>
+  {% endif %}
   <div class="post-body">
     {{ content }}
   </div>

@@ -269,3 +269,10 @@ a:hover { text-decoration: underline; }
 /* 접근성 */
 :focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* 자동 생성 글 배지 (🤖) */
+.post-generated { display:flex; align-items:center; gap:8px; font-size:13px; color:#6a6472; background:#faf8fc; border:1px solid #ece8f2; border-radius:10px; padding:9px 13px; margin:14px 0 0; }
+.post-generated .pg-emoji { font-size:16px; }
+.post-generated a { color:#5F0080; }
+:root[data-theme="dark"] .post-generated { background:#221d2b; border-color:#2f2838; color:#9990a6; }
+:root[data-theme="dark"] .post-generated a { color:#b98fd6; }
