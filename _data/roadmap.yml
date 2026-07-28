@@ -1,0 +1,98 @@
+# roadmap.md → 자동 생성. study-pipeline 발행 게이트가 갱신한다.
+categories:
+  - name: "이미 다룬 주제"
+    items:
+      - slug: "raft-consensus"
+        title: "Raft 합의 알고리즘"
+        done: true
+        url: null
+      - slug: "spring-event-tx-boundary"
+        title: "Spring 이벤트 트랜잭션 경계"
+        done: true
+        url: /2026/07/23/spring-event-tx-boundary.html
+  - name: "Database"
+    items:
+      - slug: "db-index-btree"
+        title: "DB 인덱스와 B-Tree 구조"
+        done: true
+        url: /2026/07/27/db-index-btree.html
+      - slug: "tx-isolation-mvcc"
+        title: "트랜잭션 격리수준과 MVCC"
+        done: true
+        url: /2026/07/27/tx-isolation-mvcc.html
+      - slug: "db-lock-deadlock"
+        title: "DB 락과 데드락"
+        done: true
+        url: /2026/07/27/db-lock-deadlock.html
+      - slug: "explain-query-plan"
+        title: "실행계획(EXPLAIN) 읽는 법"
+        done: false
+        url: null
+  - name: "JPA / Spring"
+    items:
+      - slug: "jpa-persistence-context"
+        title: "영속성 컨텍스트와 1차 캐시"
+        done: false
+        url: null
+      - slug: "jpa-n-plus-1"
+        title: "N+1 문제와 페치 조인"
+        done: false
+        url: null
+      - slug: "tx-propagation"
+        title: "트랜잭션 전파(Propagation)"
+        done: false
+        url: null
+      - slug: "spring-aop-proxy"
+        title: "AOP와 프록시 동작 원리"
+        done: false
+        url: null
+  - name: "JVM / Java"
+    items:
+      - slug: "jvm-memory-gc"
+        title: "JVM 메모리 구조와 GC"
+        done: false
+        url: null
+      - slug: "java-concurrency"
+        title: "Java 동시성: 스레드·락·CAS"
+        done: false
+        url: null
+  - name: "분산 / 메시징"
+    items:
+      - slug: "cap-theorem"
+        title: "CAP 정리와 일관성 모델"
+        done: false
+        url: null
+      - slug: "idempotency"
+        title: "멱등성 설계"
+        done: false
+        url: null
+      - slug: "distributed-lock"
+        title: "분산 락 (Redis/DB)"
+        done: false
+        url: null
+      - slug: "kafka-partition-consumer"
+        title: "Kafka 파티셔닝·컨슈머 그룹"
+        done: false
+        url: null
+      - slug: "saga-2pc"
+        title: "Saga vs 2PC 분산 트랜잭션"
+        done: false
+        url: null
+  - name: "캐시 / 네트워크"
+    items:
+      - slug: "redis-data-structures"
+        title: "Redis 자료구조와 활용"
+        done: false
+        url: null
+      - slug: "cache-strategy"
+        title: "캐시 전략(Cache-Aside 등)"
+        done: false
+        url: null
+      - slug: "http-1-2-3"
+        title: "HTTP/1.1·2·3 진화"
+        done: false
+        url: null
+      - slug: "tls-handshake"
+        title: "TLS 핸드셰이크"
+        done: false
+        url: null
