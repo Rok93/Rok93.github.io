@@ -26,8 +26,8 @@ categories:
         url: /2026/07/27/db-lock-deadlock.html
       - slug: "explain-query-plan"
         title: "실행계획(EXPLAIN) 읽는 법"
-        done: false
-        url: null
+        done: true
+        url: /2026/07/29/explain-query-plan.html
   - name: "JPA / Spring"
     items:
       - slug: "jpa-persistence-context"
