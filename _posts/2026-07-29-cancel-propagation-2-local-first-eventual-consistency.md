@@ -3,6 +3,9 @@ layout: post
 title: "로컬 먼저 확정하고 외부는 나중에 — 취소 API의 최종적 일관성 설계 (2/3)"
 date: 2026-07-29 09:50:00 +0900
 tags: [architecture, consistency, event, transaction, resilience]
+series: 커밋 후 외부 전파 설계기
+series_part: 2
+series_total: 3
 ---
 
 > **시리즈 "커밋 후 외부 전파 설계기" (2/3)**

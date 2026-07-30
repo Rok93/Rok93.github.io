@@ -3,6 +3,9 @@ layout: post
 title: "SRP를 교조가 아니라 '왜 함께 두는가'로 — 취소 로직 3단 레이어 분리 (3/3)"
 date: 2026-07-29 10:00:00 +0900
 tags: [architecture, design, srp, spring, transaction, code-review]
+series: 커밋 후 외부 전파 설계기
+series_part: 3
+series_total: 3
 ---
 
 > **시리즈 "커밋 후 외부 전파 설계기" (3/3)**

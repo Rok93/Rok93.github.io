@@ -3,6 +3,9 @@ layout: post
 title: "커밋했는데 왜 안 읽히지? — AFTER_COMMIT 리스너가 방금 저장한 데이터를 못 찾는 이유 (1/3)"
 date: 2026-07-29 09:40:00 +0900
 tags: [spring, transaction, jpa, database, replication, event]
+series: 커밋 후 외부 전파 설계기
+series_part: 1
+series_total: 3
 ---
 
 > **시리즈 "커밋 후 외부 전파 설계기" (1/3)**
