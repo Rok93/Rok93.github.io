@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/svg+xml" href="{{ '/favicon.svg' | relative_url }}">
   {% seo %}
+  {%- comment -%} 네이버 소유확인: jekyll-seo-tag 미지원이라 직접 렌더. _config.yml에 값 채우면 활성. {%- endcomment -%}
+  {% if site.naver_site_verification %}<meta name="naver-site-verification" content="{{ site.naver_site_verification }}">{% endif %}
   <!-- 웹폰트: Pretendard(본문) / Gowun Batang(Custom 제목) / JetBrains Mono(코드) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

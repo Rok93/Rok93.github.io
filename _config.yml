@@ -4,6 +4,16 @@ author: Gyeonglok Kim
 lang: ko
 url: "https://rok93.github.io"
 
+# 검색엔진 소유확인(사이트 인증) 코드. 각 콘솔에서 발급받아 채운다.
+#  - google/bing: jekyll-seo-tag가 아래 값을 읽어 인증 메타태그를 자동 생성.
+#  - naver: jekyll-seo-tag 미지원 → _layouts/default.html에서 naver_site_verification 값으로 직접 렌더.
+# 주의: 빈 문자열("")도 메타태그가 나가버리므로, 코드를 받기 전에는 해당 줄을 '주석 유지'한다.
+# 발급처: 구글 search.google.com/search-console · 네이버 searchadvisor.naver.com · 빙 bing.com/webmasters
+webmaster_verifications:
+  google: "GAUtQ8PGOCeuN_6nwscM1XTz1Xw-k1vLcxPEh1ALN3E"
+#   bing: "빙_인증코드"
+# naver_site_verification: "네이버_인증코드"
+
 # 빌드 서버(UTC) 기준 미래 날짜 글도 게시 (KST 시각이 UTC로는 미래가 되는 함정 방지)
 future: true
 
