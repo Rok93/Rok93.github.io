@@ -36,8 +36,8 @@ categories:
         url: /2026/08/03/jpa-persistence-context.html
       - slug: "jpa-n-plus-1"
         title: "N+1 문제와 페치 조인"
-        done: false
-        url: null
+        done: true
+        url: /2026/08/05/jpa-n-plus-1.html
       - slug: "tx-propagation"
         title: "트랜잭션 전파(Propagation)"
         done: false
