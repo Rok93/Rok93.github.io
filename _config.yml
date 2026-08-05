@@ -12,7 +12,7 @@ url: "https://rok93.github.io"
 webmaster_verifications:
   google: "GAUtQ8PGOCeuN_6nwscM1XTz1Xw-k1vLcxPEh1ALN3E"
 #   bing: "빙_인증코드"
-# naver_site_verification: "네이버_인증코드"
+naver_site_verification: "b58a19a1b11ab63d82a287a9eeaf515ab28218bf"
 
 # 빌드 서버(UTC) 기준 미래 날짜 글도 게시 (KST 시각이 UTC로는 미래가 되는 함정 방지)
 future: true
