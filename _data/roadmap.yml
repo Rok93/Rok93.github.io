@@ -40,8 +40,8 @@ categories:
         url: /2026/08/05/jpa-n-plus-1.html
       - slug: "tx-propagation"
         title: "트랜잭션 전파(Propagation)"
-        done: false
-        url: null
+        done: true
+        url: /2026/08/10/tx-propagation.html
       - slug: "spring-aop-proxy"
         title: "AOP와 프록시 동작 원리"
         done: false
