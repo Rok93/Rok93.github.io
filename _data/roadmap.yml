@@ -44,8 +44,8 @@ categories:
         url: /2026/08/10/tx-propagation.html
       - slug: "spring-aop-proxy"
         title: "AOP와 프록시 동작 원리"
-        done: false
-        url: null
+        done: true
+        url: /2026/08/12/spring-aop-proxy.html
   - name: "JVM / Java"
     items:
       - slug: "jvm-memory-gc"
