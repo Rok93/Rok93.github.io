@@ -54,8 +54,8 @@ categories:
         url: /2026/08/19/jvm-memory-gc.html
       - slug: "java-concurrency"
         title: "Java 동시성: 스레드·락·CAS"
-        done: false
-        url: null
+        done: true
+        url: /2026/08/24/java-concurrency.html
   - name: "분산 / 메시징"
     items:
       - slug: "cap-theorem"
