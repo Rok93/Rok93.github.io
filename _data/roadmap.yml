@@ -60,8 +60,8 @@ categories:
     items:
       - slug: "cap-theorem"
         title: "CAP 정리와 일관성 모델"
-        done: false
-        url: null
+        done: true
+        url: /2026/08/26/cap-theorem.html
       - slug: "idempotency"
         title: "멱등성 설계"
         done: false
