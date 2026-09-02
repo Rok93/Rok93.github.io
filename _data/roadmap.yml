@@ -68,8 +68,8 @@ categories:
         url: /2026/08/31/idempotency.html
       - slug: "distributed-lock"
         title: "분산 락 (Redis/DB)"
-        done: false
-        url: null
+        done: true
+        url: /2026/09/02/distributed-lock.html
       - slug: "kafka-partition-consumer"
         title: "Kafka 파티셔닝·컨슈머 그룹"
         done: false
