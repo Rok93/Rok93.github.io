@@ -76,8 +76,8 @@ categories:
         url: /2026/09/07/kafka-partition-consumer.html
       - slug: "saga-2pc"
         title: "Saga vs 2PC 분산 트랜잭션"
-        done: false
-        url: null
+        done: true
+        url: /2026/09/09/saga-2pc.html
   - name: "캐시 / 네트워크"
     items:
       - slug: "redis-data-structures"
