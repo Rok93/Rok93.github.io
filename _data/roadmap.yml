@@ -86,8 +86,8 @@ categories:
         url: /2026/09/14/redis-data-structures.html
       - slug: "cache-strategy"
         title: "캐시 전략(Cache-Aside 등)"
-        done: false
-        url: null
+        done: true
+        url: /2026/09/16/cache-strategy.html
       - slug: "http-1-2-3"
         title: "HTTP/1.1·2·3 진화"
         done: false
