@@ -94,5 +94,5 @@ categories:
         url: /2026/09/21/http-1-2-3.html
       - slug: "tls-handshake"
         title: "TLS 핸드셰이크"
-        done: false
-        url: null
+        done: true
+        url: /2026/09/23/tls-handshake.html
